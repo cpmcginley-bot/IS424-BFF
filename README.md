@@ -139,17 +139,17 @@ bff-homepage/
 
 ### Scrum #1 - Day 3 (End of Week 1)
 
-**Date**: [Insert date]  
+**Date**: [3/12/26]  
 **Attendees**: Collin McGinley, Jason Reetz, Deven Grover, Arun Lal, Calvin Schwake  
 **All present**: ✓ Yes / ✗ No
 
 | Name | What did you do yesterday? | What are you doing today? | Blockers |
 |------|---------------------------|--------------------------|----------|
 | **Collin** | Designed main page layout, created wireframe, started HTML | Continue HTML/CSS implementation, review Deven's prototype | None |
-| **Jason** | [Fill in] | [Fill in] | [Fill in] |
-| **Deven** | Wrote user stories, started Justinmind prototype | Complete prototype design, share with Collin for feedback | [Fill in] |
-| **Arun** | Set up Trello board, configured burndown chart, created task cards | Daily Trello updates, start collecting hours from team | [Fill in] |
-| **Calvin** | Set up GitHub repository structure, created README template | Help Jason with Git workflow, prepare for scrum documentation | [Fill in] |
+| **Jason** | Designed navigation layout | Help Calvin with Git workflow, continue coding navigation menu, integrate with wireframe | None |
+| **Deven** | Wrote user stories, started Justinmind prototype | Complete prototype design, share with Collin for feedback | None |
+| **Arun** | Set up Trello board, configured burndown chart, created task cards | Daily Trello updates, start collecting hours from team | None |
+| **Calvin** | Set up GitHub repository structure, created README template | Help Jason with Git workflow, prepare for scrum documentation | None |
 
 ---
 
