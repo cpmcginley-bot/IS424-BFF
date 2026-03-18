@@ -33,9 +33,9 @@ The Trello board tracks all sprint tasks across three lists: To Do, In Progress,
 
 ### User Story 2: Member Event Discovery
 
-**As a** registered member,  
-**I want to** see upcoming BFF events on the homepage,  
-**So that** I can quickly find events I'm interested in attending.
+**As an** admin user,  
+**I want to** update the homepage, navigation menu, and featured content,  
+**So that** visitors always see current information and the site reflects our branding accurately. 
 
 **Acceptance Criteria**:
 - [ ] Logged-in members see the next 3 upcoming BFF events
