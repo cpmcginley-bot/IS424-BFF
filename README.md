@@ -18,27 +18,25 @@ The Trello board tracks all sprint tasks across three lists: To Do, In Progress,
 
 ### User Story 1: Prospective Member Discovery
 
-**As a** prospective member,  
-**I want to** see what BFF is about on the homepage,  
-**So that** I can decide if I want to join.
+As a prospective member,
+I want to understand what BFF is, what events they run, and what they’ve done in the past,
+so that I can decide if joining the club is something I’m interested in.
 
 **Acceptance Criteria**:
 - [ ] Homepage displays BFF's mission statement (clear, one-paragraph intro)
-- [ ] Main navigation includes links to: Home, About, Events, Members, Apply
-- [ ] Clear "Join Us" or "Learn More" call-to-action button is visible above the fold
-- [ ] Page loads in under 3 seconds on desktop and mobile networks
+- [ ] Main navigation includes links to: Home, About, Events, Members, Apply, etc
+- [ ] Clear "Learn More" call-to-action button is visible above the fold
 - [ ] Homepage is accessible (readable text contrast, keyboard navigation works)
 
 ---
 
 ### User Story 2: Member Event Discovery
 
-**As an** admin user,  
-**I want to** update the homepage, navigation menu, and featured content,  
-**So that** visitors always see current information and the site reflects our branding accurately. 
+As an executive member of BFF,
+I want to update event information, highlight upcoming meetings, and manage homepage content,
+so that the website always reflects current club activity and engagement.
 
 **Acceptance Criteria**:
-- [ ] Logged-in members see the next 3 upcoming BFF events
 - [ ] Each event displays: Event Name, Date, Time, Location, "RSVP" or "Learn More" button
 - [ ] Events are sorted by date (soonest first)
 - [ ] Clicking on an event name/button provides more details
