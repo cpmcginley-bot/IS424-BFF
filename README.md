@@ -8,9 +8,8 @@
 
 ## 1. TRELLO BOARD
 
-**Trello Board Link**: [Insert link here]
+**Trello Board Link**: https://trello.com/invite/b/697bcd3a80c6b73243d8f087/ATTI880c24e832310e935bb5a21a6db55ab9C96191DD/group-4-project-board)
 
-The Trello board tracks all sprint tasks across three lists: To Do, In Progress, and Done. Each card includes estimated hours, assigned owner, start date, and hours spent. The board is updated daily to reflect team progress.
 
 ---
 
@@ -44,7 +43,7 @@ so that the website always reflects current club activity and engagement.
 
 ---
 
-## 3. TASK BREAKDOWN & BURNDOWN CHART
+## 3. User Story Task Breakdown
 
 ### Sprint Tasks
 
@@ -96,42 +95,9 @@ so that the website always reflects current club activity and engagement.
 
 ## 5. GITHUB REPOSITORY
 
-**Repository URL**: [Insert link to public GitHub repo]
+**Repository URL**: (https://github.com/cpmcginley-bot/IS424-BFF)
 
-**Repository Structure**:
-```
-bff-homepage/
-├── /src
-│   ├── index.html          (main homepage)
-│   ├── /css
-│   │   └── style.css       (custom CSS, alongside Bulma)
-│   └── /js
-│       ├── main.js         (initialization & page setup)
-│       ├── nav.js          (navigation functionality)
-│       └── events.js       (event display & filtering)
-├── /images
-│   ├── bff-logo.png
-│   ├── hero-image.jpg
-│   └── [other images used]
-├── /prototypes
-│   ├── homepage.proto      (Justinmind file)
-│   ├── homepage-screenshot-1.png
-│   ├── homepage-screenshot-2.png
-│   └── homepage-screenshot-3.png
-├── .gitignore
-├── README.md               (this file)
-└── LICENSE
-```
 
-**How to Run Locally**:
-1. Clone the repository: `git clone [repo-url]`
-2. Navigate to the project: `cd bff-homepage`
-3. Open `src/index.html` in a web browser
-4. Or use a local server: `python3 -m http.server` and visit `localhost:8000/src`
-
-**Branch Strategy**: Feature branches (e.g., `feature/homepage-nav`) merged to `main` after code review.
-
----
 
 ## 6. DAILY SCRUM MEETINGS
 
@@ -338,96 +304,8 @@ No current blockers.
 [Feedback from invited team: What did they think of the homepage? Any suggestions? Any bugs they found?]  
 [Attendance: [List who attended from invited team]]
 
----
-
-## 8. SPRINT METRICS SUMMARY
-
-**Sprint Planning Estimate**: 69 hours  
-**Actual Hours Completed**: [Fill in after Day 10]  
-**Velocity**: [Completed / Planned = X%]
-
-**Cards Planned**: 10  
-**Cards Completed**: [Fill in after Day 10]  
-**Completion Rate**: [X%]
-
-**Key Blockers Encountered**:
-- [Blocker 1 and how it was resolved]
-- [Blocker 2 and how it was resolved]
-
-**Team Capacity Insights**:
-- Were estimates accurate?
-- Did any tasks take significantly longer/shorter than expected?
-- Should the team adjust estimates for Sprint 2?
 
 ---
 
-## 9. SUBMISSION CHECKLIST
-
-**Before submitting, verify all items below:**
-
-- [ ] **README.md** is complete with all sections filled in
-- [ ] **Prototypes folder** includes:
-  - [ ] Justinmind `.proto` file (or `.xd` if using XD)
-  - [ ] At least 3 screenshots of the prototype
-  - [ ] Screenshots are clearly labeled (e.g., `homepage-full.png`, `mobile-view.png`)
-- [ ] **src folder** includes:
-  - [ ] `index.html` (main page)
-  - [ ] `css/style.css` (custom CSS)
-  - [ ] `js/main.js`, `js/nav.js`, `js/events.js` (JavaScript modules)
-  - [ ] All files are properly linked (images load, CSS applies, JS runs)
-- [ ] **images folder** includes all images used on the page
-- [ ] **GitHub repo** is public and all files are pushed to `main` branch
-- [ ] **Trello board link** is in README and board is public
-- [ ] **Burndown chart screenshots** are clear and labeled by day
-- [ ] **All team members' names** are listed with their roles
-- [ ] **Links tested**: Trello board works, GitHub repo is accessible, screenshots load
-- [ ] **README is proofread**: No typos, consistent formatting, professional tone
-- [ ] **All files are in one folder** named `Group4_D2` (per course naming convention)
-- [ ] **Folder is zipped** and ready to upload
-
----
-
-## 10. KEY FILES & DELIVERABLES
-
-| Deliverable | Owner | Location | Status |
-|-------------|-------|----------|--------|
-| User Stories (2) | Deven | This README (Section 2) | ⬜ In Progress |
-| Justinmind Prototype | Deven | `/prototypes/homepage.proto` | ⬜ In Progress |
-| Prototype Screenshots | Deven | `/prototypes/*.png` | ⬜ In Progress |
-| HTML Implementation | Collin | `/src/index.html` | ⬜ In Progress |
-| CSS Styling | Collin | `/src/css/style.css` | ⬜ In Progress |
-| JavaScript Components | Jason | `/src/js/*.js` | ⬜ In Progress |
-| Trello Board | Arun | Link in Section 1 | ⬜ In Progress |
-| Burndown Charts (2) | Arun | This README (Section 4) | ⬜ In Progress |
-| Scrum Meetings (2) | Calvin | This README (Section 6) | ⬜ In Progress |
-| Sprint Review | Deven + Team | This README (Section 7) | ⬜ In Progress |
-| GitHub Repo | Calvin | Link in Section 5 | ⬜ In Progress |
-
----
-
-## 11. TEAM ROLES & RESPONSIBILITIES
-
-| Person | Role | Key Deliverables | Hours |
-|--------|------|-------------------|-------|
-| **Collin McGinley** | Lead Developer | Page design, HTML/CSS/JS implementation, client communication | 30 |
-| **Jason Reetz** | Developer | JavaScript components, code review, testing | 18 |
-| **Deven Grover** | Designer + Scrum Facilitator | User stories, Justinmind prototype, sprint review | 22 |
-| **Arun Lal** | Operations | Trello board, burndown chart, daily tracking | 12 |
-| **Calvin Schwake** | Repository Owner + Scrum Recorder | GitHub setup, scrum documentation, README assembly | 10 |
-
----
-
-## 12. NOTES & OBSERVATIONS
-
-[Space for team to add any additional notes about the sprint, lessons learned, or adjustments for next sprint.]
-
----
-
-**Sprint End Date**: [Insert date]  
-**Submitted By**: [Name]  
-**Date Submitted**: [Date]  
-**Submission Link**: [Link to zipped folder or Canvas submission]
-
----
 
 **End of Sprint 1 Submission**
