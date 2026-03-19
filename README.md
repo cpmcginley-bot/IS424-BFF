@@ -135,35 +135,149 @@ bff-homepage/
 
 ## 6. DAILY SCRUM MEETINGS
 
-### Scrum #1 - Day 3 (End of Week 1)
+### Scrum #1 – Day 3 (End of Week 1)
 
-**Date**: [3/12/26]  
-**Attendees**: Collin McGinley, Jason Reetz, Deven Grover, Arun Lal, Calvin Schwake  
-**All present**: ✓ Yes / ✗ No
-
-| Name | What did you do yesterday? | What are you doing today? | Blockers |
-|------|---------------------------|--------------------------|----------|
-| **Collin** | Designed main page layout, created wireframe, started HTML | Continue HTML/CSS implementation, review Deven's prototype | None |
-| **Jason** | Designed navigation layout | Help Calvin with Git workflow, continue coding navigation menu, integrate with wireframe | None |
-| **Deven** | Wrote user stories, started Justinmind prototype | Complete prototype design, share with Collin for feedback | None |
-| **Arun** | Set up Trello board, configured burndown chart, created task cards | Daily Trello updates, start collecting hours from team | None |
-| **Calvin** | Set up GitHub repository structure, created README template | Help Jason with Git workflow, prepare for scrum documentation | None |
+**Date:** 3/12/26  
+**Attendees:** Collin McGinley, Jason Reetz, Deven Grover, Arun Lal, Calvin Schwake  
+**All present:** Yes  
 
 ---
 
-### Scrum #2 - Day 8 (End of Week 2)
+**__Collin__**
 
-**Date**: [Insert date]  
-**Attendees**: Collin McGinley, Jason Reetz, Deven Grover, Arun Lal, Calvin Schwake  
-**All present**: ✓ Yes / ✗ No
+**What did you do yesterday:**  
+Designed main page layout, created wireframe, started HTML.
 
-| Name | What did you do yesterday? | What are you doing today? | Blockers |
-|------|---------------------------|--------------------------|----------|
-| **Collin** | [Fill in] | [Fill in] | [Fill in] |
-| **Jason** | [Fill in] | [Fill in] | [Fill in] |
-| **Deven** | [Fill in] | [Fill in] | [Fill in] |
-| **Arun** | [Fill in] | [Fill in] | [Fill in] |
-| **Calvin** | [Fill in] | [Fill in] | [Fill in] |
+**What are you planning to do today:**  
+Continue HTML/CSS implementation, review Deven's prototype.
+
+**Any problems are you facing:**  
+No current blockers.
+
+---
+
+**__Jason__**
+
+**What did you do yesterday:**  
+Designed navigation layout.
+
+**What are you planning to do today:**  
+Help Calvin with Git workflow, continue coding navigation menu, integrate with wireframe.
+
+**Any problems are you facing:**  
+No current blockers.
+
+---
+
+**__Deven__**
+
+**What did you do yesterday:**  
+Wrote user stories, started Justinmind prototype.
+
+**What are you planning to do today:**  
+Complete prototype design, share with Collin for feedback.
+
+**Any problems are you facing:**  
+No current blockers.
+
+---
+
+**__Arun__**
+
+**What did you do yesterday:**  
+Set up Trello board, configured burndown chart, created task cards.
+
+**What are you planning to do today:**  
+Daily Trello updates, start collecting hours from team.
+
+**Any problems are you facing:**  
+No current blockers.
+
+---
+
+**__Calvin__**
+
+**What did you do yesterday:**  
+Set up GitHub repository structure, created README template.
+
+**What are you planning to do today:**  
+Help Jason with Git workflow, prepare for scrum documentation.
+
+**Any problems are you facing:**  
+No current blockers.
+
+
+---
+### Scrum #2 – Day 8 (End of Week 2)
+
+**Date:** 3/18/26  
+**Attendees:** Collin McGinley, Jason Reetz, Deven Grover, Arun Lal, Calvin Schwake  
+**All present:** Yes  
+
+---
+
+**__Collin__**
+
+**What did you do yesterday:**  
+Finalized burndown chart tracking for the full sprint and wrapped up layout adjustments.
+
+**What are you planning to do today:**  
+Review overall sprint progress and ensure remaining tasks are completed before sprint review.
+
+**Any problems are you facing:**  
+No current blockers.
+
+---
+
+**__Jason__**
+
+**What did you do yesterday:**  
+Finalized implementation of homepage functionality including HTML, CSS, and interactive components.
+
+**What are you planning to do today:**  
+Double check code functionality and assist with any final fixes.
+
+**Any problems are you facing:**  
+No current blockers.
+
+---
+
+**__Deven__**
+
+**What did you do yesterday:**  
+Worked with Arun to finalize user stories and prepare sprint review objectives.
+
+**What are you planning to do today:**  
+Review content and help coordinate final preparation for submission.
+
+**Any problems are you facing:**  
+No current blockers.
+
+---
+
+**__Arun__**
+
+**What did you do yesterday:**  
+Helped finalize user stories, organized scrum objectives, and set up the sprint review meeting.
+
+**What are you planning to do today:**  
+Go through everyone’s work and make sure everything is ready to submit.
+
+**Any problems are you facing:**  
+No current blockers.
+
+---
+
+**__Calvin__**
+
+**What did you do yesterday:**  
+Worked with Jason to finalize homepage setup and repository organization.
+
+**What are you planning to do today:**  
+Ensure all files are properly structured and ready for submission.
+
+**Any problems are you facing:**  
+No current blockers.
 
 ---
 
