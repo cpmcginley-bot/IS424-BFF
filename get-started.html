@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav class="navbar px-4 py-3" role="navigation" aria-label="main navigation">
+    <nav
+      class="navbar px-4 py-3"
+      role="navigation"
+      aria-label="main navigation"
+    >
       <div class="navbar-brand">
         <div class="navbar-item">
           <strong class="is-size-4 bff-red-text">Badger Future Founders</strong>
@@ -33,10 +37,18 @@
 
       <div id="mainNavbar" class="navbar-menu">
         <div class="navbar-start main-nav-links">
-          <a class="navbar-item has-text-weight-medium" href="Index.html">Home</a>
-          <a class="navbar-item has-text-weight-medium" href="apply.html">Apply</a>
-          <a class="navbar-item has-text-weight-medium" href="events.html">Events</a>
-          <a class="navbar-item has-text-weight-medium" href="about.html">About</a>
+          <a class="navbar-item has-text-weight-medium" href="index.html"
+            >Home</a
+          >
+          <a class="navbar-item has-text-weight-medium" href="apply.html"
+            >Apply</a
+          >
+          <a class="navbar-item has-text-weight-medium" href="events.html"
+            >Events</a
+          >
+          <a class="navbar-item has-text-weight-medium" href="about.html"
+            >About</a
+          >
         </div>
 
         <div class="navbar-end">
@@ -52,16 +64,126 @@
       </div>
     </nav>
 
-    <main class="section">
-      <div class="container">
-        <h1 class="title">Get Started</h1>
-        <p class="subtitle">Choose how you want to continue.</p>
-
-        <div class="buttons">
-          <a class="button bff-red-button" href="#">Sign In</a>
-          <a class="button is-light bff-red-text" href="#">Sign Up</a>
+    <main>
+      <section class="hero is-black home-hero">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title has-text-white home-hero-title">
+              Get <span class="bff-red-text">Started</span>
+            </h1>
+            <p class="subtitle has-text-grey-light home-hero-subtitle">
+              Sign in to your account or create a new one.
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
+
+      <section class="section home-card-section">
+        <div class="container">
+          <div class="columns is-variable is-5">
+            <div class="column">
+              <div class="card home-info-card">
+                <div class="card-content">
+                  <p class="title is-3">Sign In</p>
+                  <p class="content is-size-5 mb-4">
+                    Already a member? Sign in to access events, RSVP, and manage
+                    your profile.
+                  </p>
+
+                  <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                      <input
+                        class="input"
+                        type="email"
+                        placeholder="you@wisc.edu"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Password</label>
+                    <div class="control">
+                      <input
+                        class="input"
+                        type="password"
+                        placeholder="Your password"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="field mt-4">
+                    <div class="control">
+                      <button
+                        class="button bff-red-button has-text-weight-semibold"
+                        type="button"
+                      >
+                        Sign In
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="column">
+              <div class="card home-info-card">
+                <div class="card-content">
+                  <p class="title is-3">Sign Up</p>
+                  <p class="content is-size-5 mb-4">
+                    New here? Create an account to get started with Badger
+                    Future Founders.
+                  </p>
+
+                  <div class="field">
+                    <label class="label">Full Name</label>
+                    <div class="control">
+                      <input
+                        class="input"
+                        type="text"
+                        placeholder="Your full name"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control">
+                      <input
+                        class="input"
+                        type="email"
+                        placeholder="you@wisc.edu"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="field">
+                    <label class="label">Password</label>
+                    <div class="control">
+                      <input
+                        class="input"
+                        type="password"
+                        placeholder="Create a password"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="field mt-4">
+                    <div class="control">
+                      <button
+                        class="button is-light bff-red-text has-text-weight-semibold"
+                        type="button"
+                      >
+                        Create Account
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="navbar.js"></script>

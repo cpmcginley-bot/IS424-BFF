@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav class="navbar px-4 py-3" role="navigation" aria-label="main navigation">
+    <nav
+      class="navbar px-4 py-3"
+      role="navigation"
+      aria-label="main navigation"
+    >
       <div class="navbar-brand">
         <div class="navbar-item">
           <strong class="is-size-4 bff-red-text">Badger Future Founders</strong>
@@ -33,10 +37,18 @@
 
       <div id="mainNavbar" class="navbar-menu">
         <div class="navbar-start main-nav-links">
-          <a class="navbar-item has-text-weight-medium" href="Index.html">Home</a>
-          <a class="navbar-item has-text-weight-medium" href="apply.html">Apply</a>
-          <a class="navbar-item has-text-weight-medium" href="events.html">Events</a>
-          <a class="navbar-item has-text-weight-medium" href="about.html">About</a>
+          <a class="navbar-item has-text-weight-medium" href="index.html"
+            >Home</a
+          >
+          <a class="navbar-item has-text-weight-medium" href="apply.html"
+            >Apply</a
+          >
+          <a class="navbar-item has-text-weight-medium" href="events.html"
+            >Events</a
+          >
+          <a class="navbar-item has-text-weight-medium" href="about.html"
+            >About</a
+          >
         </div>
 
         <div class="navbar-end">
@@ -52,11 +64,96 @@
       </div>
     </nav>
 
-    <main class="section">
-      <div class="container">
-        <h1 class="title">About</h1>
-        <p class="subtitle">Learn more about Badger Future Founders.</p>
-      </div>
+    <main>
+      <section class="hero is-black home-hero">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title has-text-white home-hero-title">
+              About <span class="bff-red-text">BFF</span>
+            </h1>
+            <p class="subtitle has-text-grey-light home-hero-subtitle">
+              Learn about the mission and people behind Badger Future Founders.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-card-section">
+        <div class="container">
+          <h2 class="title is-3">Our Mission</h2>
+          <p class="is-size-5" style="max-width: 700px">
+            Badger Future Founders is a student-run entrepreneurship community
+            at UW-Madison. We exist to help students explore startup ideas,
+            connect with mentors, and build the skills they need to launch real
+            ventures — regardless of major or experience level.
+          </p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="container">
+          <h2 class="title is-3">What We Do</h2>
+          <div class="columns is-variable is-5">
+            <div class="column">
+              <div class="card home-info-card">
+                <div class="card-content">
+                  <p class="title is-4">Workshops</p>
+                  <p class="content is-size-5">
+                    Hands-on sessions covering topics like pitching, product
+                    development, and fundraising basics.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card home-info-card">
+                <div class="card-content">
+                  <p class="title is-4">Networking</p>
+                  <p class="content is-size-5">
+                    Opportunities to meet local founders, alumni entrepreneurs,
+                    and fellow students who share your drive.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="column">
+              <div class="card home-info-card">
+                <div class="card-content">
+                  <p class="title is-4">Pitch Events</p>
+                  <p class="content is-size-5">
+                    Showcase your ideas in front of judges, get feedback, and
+                    compete for recognition on campus.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-card-section">
+        <div class="container">
+          <h2 class="title is-3">Get Involved</h2>
+          <p class="is-size-5 mb-4" style="max-width: 700px">
+            Whether you have a startup idea or just want to learn, there is a
+            place for you at BFF.
+          </p>
+          <div class="buttons">
+            <a
+              class="button bff-red-button is-medium has-text-weight-semibold"
+              href="apply.html"
+            >
+              Apply Now
+            </a>
+            <a
+              class="button is-light bff-red-text is-medium has-text-weight-semibold"
+              href="events.html"
+            >
+              View Events
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="navbar.js"></script>

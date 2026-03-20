@@ -11,7 +11,11 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <nav class="navbar px-4 py-3" role="navigation" aria-label="main navigation">
+    <nav
+      class="navbar px-4 py-3"
+      role="navigation"
+      aria-label="main navigation"
+    >
       <div class="navbar-brand">
         <div class="navbar-item">
           <strong class="is-size-4 bff-red-text">Badger Future Founders</strong>
@@ -33,10 +37,18 @@
 
       <div id="mainNavbar" class="navbar-menu">
         <div class="navbar-start main-nav-links">
-          <a class="navbar-item has-text-weight-medium" href="Index.html">Home</a>
-          <a class="navbar-item has-text-weight-medium" href="apply.html">Apply</a>
-          <a class="navbar-item has-text-weight-medium" href="events.html">Events</a>
-          <a class="navbar-item has-text-weight-medium" href="about.html">About</a>
+          <a class="navbar-item has-text-weight-medium" href="index.html"
+            >Home</a
+          >
+          <a class="navbar-item has-text-weight-medium" href="apply.html"
+            >Apply</a
+          >
+          <a class="navbar-item has-text-weight-medium" href="events.html"
+            >Events</a
+          >
+          <a class="navbar-item has-text-weight-medium" href="about.html"
+            >About</a
+          >
         </div>
 
         <div class="navbar-end">
@@ -52,11 +64,88 @@
       </div>
     </nav>
 
-    <main class="section">
-      <div class="container">
-        <h1 class="title">Apply</h1>
-        <p class="subtitle">Application page placeholder.</p>
-      </div>
+    <main>
+      <section class="hero is-black home-hero">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title has-text-white home-hero-title">
+              <span class="bff-red-text">Apply</span>
+            </h1>
+            <p class="subtitle has-text-grey-light home-hero-subtitle">
+              Interested in joining? Tell us a bit about yourself.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-card-section">
+        <div class="container" style="max-width: 640px">
+          <h2 class="title is-3">Membership Application</h2>
+          <p class="mb-5">
+            Fill out the form below and our team will review your application.
+            We welcome students of all majors and experience levels.
+          </p>
+
+          <div class="field">
+            <label class="label">Full Name</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Your full name" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Email</label>
+            <div class="control">
+              <input class="input" type="email" placeholder="you@wisc.edu" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Major</label>
+            <div class="control">
+              <input class="input" type="text" placeholder="Your major" />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Year</label>
+            <div class="control">
+              <div class="select">
+                <select>
+                  <option value="">Select your year</option>
+                  <option>Freshman</option>
+                  <option>Sophomore</option>
+                  <option>Junior</option>
+                  <option>Senior</option>
+                  <option>Graduate</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Why do you want to join BFF?</label>
+            <div class="control">
+              <textarea
+                class="textarea"
+                placeholder="Tell us a bit about your interest in entrepreneurship..."
+                rows="4"
+              ></textarea>
+            </div>
+          </div>
+
+          <div class="field mt-5">
+            <div class="control">
+              <button
+                class="button bff-red-button is-medium has-text-weight-semibold"
+                type="button"
+              >
+                Submit Application
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="navbar.js"></script>
