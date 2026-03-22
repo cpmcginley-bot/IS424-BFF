@@ -302,11 +302,20 @@ Yes, we are satisfied with what we accomplished. This sprint has taught us a lot
 
 #### Q6: Which group was invited? What are your observations/notes? Were they all present?
 
-**Answer**:  
-[Invited team: [name]]  
-[Feedback from invited team: What did they think of the homepage? Any suggestions? Any bugs they found?]  
-[Attendance: [List who attended from invited team]]
+**Invited team**:  
+Group 1 (Serena, Friday, Celeste, Derek, Maxwell)
+
+**Feedback from invited team:**  
+
+**What did they think of the homepage?** 
+They thought the team fit and liked how the important words were colored and highlighted. They also appreciated how the website included information about their upcoming events, what they do, mission, etc. It showed what was needed to potential members to underatand the nature of the club. 
+
+**What could be improved?** 
+They thought the site so far looks great, and highlights all the important information. However on the pages, it seems a bit wordy and maybe can consolidate some information and split it up into different pages, so it looks visually appealing. 
+
+**Attendance?** 
+Serena, Friday, Celeste, Derek, Maxwell all showed up
 
 ---
 
-**End of Sprint 1 Submission**
+**End of Sprint 1**
