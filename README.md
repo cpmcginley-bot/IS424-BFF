@@ -252,14 +252,14 @@ No current blockers.
 
 ## 7. SPRINT REVIEW & RETROSPECTIVE
 
-**Sprint Review Date**: [03/22/2026]  
-**Time**: [1:00PM]  
-**Location**: [Grainger Library]
+**Sprint Review Date**: 03/22/2026  
+**Time**: 1:00PM  
+**Location**: Grainger Library
 
 **Our Team Present**: Collin McGinley, Jason Reetz, Deven Grover, Arun Lal, Calvin Schwake
 
-**Invited Team**: [Team name]  
-**Invited Team Present**: ✓ Yes / ✗ No (list who attended)
+**Invited Team**: Group 1 
+**Invited Team Present**:  Yes (Serena, Friday, Celeste, Derek, Maxwell)
 
 ---
 
