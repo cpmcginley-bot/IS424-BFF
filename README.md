@@ -141,26 +141,33 @@ No current blockers.
 ****Deven****
 
 **What did you do yesterday:**
+Wrote user stories, started Justinmind prototype.
 
 **What are you planning to do today:**
+set up review time with team
 
 **Any problems are you facing:**
+No current blockers.
 
 ---
 
 ****Arun****
 
 **What did you do yesterday:**
+Set up and edited Trello board
 
 **What are you planning to do today:**
+Daily Trello updates, start collecting hours from team, set up daily sprints. 
 
 **Any problems are you facing:**
+No current blockers.
 
 ---
 
 ****Calvin****
 
 **What did you do yesterday:**
+created README template
 
 **What are you planning to do today:**  
 Help Jason with Git workflow, prepare for scrum documentation.
