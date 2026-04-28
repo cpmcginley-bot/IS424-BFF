@@ -9,6 +9,7 @@ import {
   getDocs,
   deleteDoc,
   doc,
+  updateDoc,
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
 let auth = window.BFFFirebase.auth;
@@ -23,6 +24,25 @@ let adminEventsEmptyMessage = document.getElementById(
   "admin-events-empty-message",
 );
 let deleteEventMessage = document.getElementById("delete-event-message");
+let applicationMessage = document.getElementById("application-message");
+let pendingApplicationsList = document.getElementById(
+  "pending-applications-list",
+);
+let acceptedApplicationsList = document.getElementById(
+  "accepted-applications-list",
+);
+let rejectedApplicationsList = document.getElementById(
+  "rejected-applications-list",
+);
+let pendingApplicationsEmpty = document.getElementById(
+  "pending-applications-empty",
+);
+let acceptedApplicationsEmpty = document.getElementById(
+  "accepted-applications-empty",
+);
+let rejectedApplicationsEmpty = document.getElementById(
+  "rejected-applications-empty",
+);
 
 function formatEventDate(dateValue) {
   if (typeof dateValue !== "string" || !dateValue.includes("-")) {
@@ -148,6 +168,119 @@ async function loadAdminEvents() {
   }
 }
 
+function makeApplicationCard(applicationId, applicationData) {
+  let box = document.createElement("div");
+  box.className = "box";
+
+  let name = document.createElement("p");
+  name.className = "has-text-weight-semibold is-size-5";
+  name.textContent = applicationData.name || "Unnamed Applicant";
+
+  let details = document.createElement("p");
+  details.className = "has-text-grey mb-2";
+  details.textContent =
+    (applicationData.email || "No email") +
+    " · " +
+    (applicationData.major || "No major") +
+    " · " +
+    (applicationData.year || "No year");
+
+  let why = document.createElement("p");
+  why.className = "mb-3";
+  why.textContent = applicationData.why || "No response provided.";
+
+  box.appendChild(name);
+  box.appendChild(details);
+  box.appendChild(why);
+
+  if (applicationData.status === "pending" || !applicationData.status) {
+    let acceptBtn = document.createElement("button");
+    acceptBtn.className = "button is-success is-light has-text-weight-semibold mr-2";
+    acceptBtn.type = "button";
+    acceptBtn.textContent = "Accept";
+
+    let rejectBtn = document.createElement("button");
+    rejectBtn.className = "button is-danger is-light has-text-weight-semibold";
+    rejectBtn.type = "button";
+    rejectBtn.textContent = "Reject";
+
+    acceptBtn.addEventListener("click", () => {
+      updateApplicationStatus(applicationId, "accepted");
+    });
+
+    rejectBtn.addEventListener("click", () => {
+      updateApplicationStatus(applicationId, "rejected");
+    });
+
+    box.appendChild(acceptBtn);
+    box.appendChild(rejectBtn);
+  }
+
+  return box;
+}
+
+function resetApplicationLists() {
+  pendingApplicationsList.innerHTML = "";
+  acceptedApplicationsList.innerHTML = "";
+  rejectedApplicationsList.innerHTML = "";
+}
+
+function showEmptyApplicationMessages() {
+  if (pendingApplicationsList.children.length === 0) {
+    pendingApplicationsEmpty.textContent = "No pending applications.";
+    pendingApplicationsList.appendChild(pendingApplicationsEmpty);
+  }
+
+  if (acceptedApplicationsList.children.length === 0) {
+    acceptedApplicationsEmpty.textContent = "No accepted members yet.";
+    acceptedApplicationsList.appendChild(acceptedApplicationsEmpty);
+  }
+
+  if (rejectedApplicationsList.children.length === 0) {
+    rejectedApplicationsEmpty.textContent = "No rejected applications.";
+    rejectedApplicationsList.appendChild(rejectedApplicationsEmpty);
+  }
+}
+
+async function loadApplications() {
+  try {
+    resetApplicationLists();
+
+    let applicationDocs = await getDocs(collection(db, "applications"));
+
+    applicationDocs.forEach((applicationDoc) => {
+      let applicationData = applicationDoc.data();
+      let status = applicationData.status || "pending";
+      let card = makeApplicationCard(applicationDoc.id, applicationData);
+
+      if (status === "accepted") {
+        acceptedApplicationsList.appendChild(card);
+      } else if (status === "rejected") {
+        rejectedApplicationsList.appendChild(card);
+      } else {
+        pendingApplicationsList.appendChild(card);
+      }
+    });
+
+    showEmptyApplicationMessages();
+  } catch (err) {
+    console.error("Could not load applications:", err);
+    resetApplicationLists();
+    pendingApplicationsEmpty.textContent =
+      "Could not load applications: " + err.message;
+    pendingApplicationsList.appendChild(pendingApplicationsEmpty);
+  }
+}
+
+async function updateApplicationStatus(applicationId, newStatus) {
+  await updateDoc(doc(db, "applications", applicationId), {
+    status: newStatus,
+  });
+
+  applicationMessage.style.display = "block";
+  loadApplications();
+}
+
 // Protect this page. If nobody is signed in, send them back.
 onAuthStateChanged(auth, (user) => {
   if (!user) {
@@ -155,6 +288,7 @@ onAuthStateChanged(auth, (user) => {
   } else {
     console.log("Admin signed in:", user.email);
     loadAdminEvents();
+    loadApplications();
   }
 });
 

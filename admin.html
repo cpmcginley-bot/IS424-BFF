@@ -39,7 +39,7 @@
         <div class="hero-body">
           <div class="container">
             <h1 class="title has-text-white home-hero-title">
-              Admin <span class="bff-red-text">Events</span>
+              Admin <span class="bff-red-text">Dashboard</span>
             </h1>
             <p class="subtitle has-text-grey-light home-hero-subtitle">
               Create event details for future event management.
@@ -179,6 +179,44 @@
               <div id="admin-events-list">
                 <p id="admin-events-empty-message" class="has-text-grey mb-3">
                   Loading events...
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card get-started-card mt-5">
+            <div class="card-content">
+              <h2 class="title is-3">Applications</h2>
+              <p class="mb-5">
+                Review pending applications and keep track of accepted members.
+              </p>
+
+              <p
+                id="application-message"
+                class="has-text-success mb-4"
+                style="display: none"
+              >
+                Application updated.
+              </p>
+
+              <h3 class="title is-4">Pending Applications</h3>
+              <div id="pending-applications-list" class="mb-5">
+                <p id="pending-applications-empty" class="has-text-grey">
+                  Loading applications...
+                </p>
+              </div>
+
+              <h3 class="title is-4">Accepted Members</h3>
+              <div id="accepted-applications-list" class="mb-5">
+                <p id="accepted-applications-empty" class="has-text-grey">
+                  Loading accepted members...
+                </p>
+              </div>
+
+              <h3 class="title is-4">Rejected Applications</h3>
+              <div id="rejected-applications-list">
+                <p id="rejected-applications-empty" class="has-text-grey">
+                  Loading rejected applications...
                 </p>
               </div>
             </div>

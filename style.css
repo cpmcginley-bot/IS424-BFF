@@ -125,6 +125,43 @@ body {
   height: 100%;
 }
 
+.home-card-photo {
+  position: relative;
+  overflow: hidden;
+  min-height: 280px;
+  background-position: center;
+  background-size: cover;
+  border: 0;
+}
+
+.home-card-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.58);
+}
+
+.home-card-photo .card-content {
+  position: relative;
+  z-index: 1;
+}
+
+.home-card-photo .content {
+  color: #f3f4f6;
+}
+
+.home-card-apply {
+  background-image: url("events/avatars/snow-scholars-stock.webp");
+}
+
+.home-card-events {
+  background-image: url("events/avatars/stock-workshop.webp");
+}
+
+.home-card-about {
+  background-image: url("events/avatars/grainger-stock.jpeg");
+}
+
 .get-started-card {
   height: 100%;
   border: 1px solid #d1d5db;
