@@ -125,6 +125,43 @@ body {
   height: 100%;
 }
 
+.get-started-card {
+  height: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 12px;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.08);
+  background-color: #ffffff;
+}
+
+.get-started-input,
+.select select.get-started-input {
+  background-color: #ffffff;
+  border-color: #d1d5db;
+  color: #1f2937;
+}
+
+.admin-signin-button {
+  background-color: #1f2937;
+  border-color: #4b5563;
+  color: #f87171;
+}
+
+.admin-signin-button:hover,
+.admin-signin-button:focus {
+  background-color: #374151;
+  border-color: #6b7280;
+  color: #fca5a5;
+}
+
+.admin-modal-label {
+  color: #ffffff;
+}
+
+.admin-modal-input {
+  background-color: #ffffff;
+  color: #1f2937;
+}
+
 .auth-card-title {
   color: #ffffff !important;
 }

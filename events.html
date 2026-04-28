@@ -38,9 +38,6 @@
           <a class="navbar-item has-text-weight-medium" href="index.html"
             >Home</a
           >
-          <a class="navbar-item has-text-weight-medium" href="apply.html"
-            >Apply</a
-          >
           <a class="navbar-item has-text-weight-medium" href="events.html"
             >Events</a
           >
@@ -82,68 +79,11 @@
       <section class="section home-card-section">
         <div class="container">
           <h2 class="title is-3">Upcoming Events</h2>
-          <div class="columns is-variable is-5">
-            <div class="column">
-              <div class="card home-info-card">
-                <div class="card-content">
-                  <p class="title is-4 has-text-white">Startup Pitch Night</p>
-                  <p class="has-text-grey mb-2">
-                    April 10, 2026 &middot; 6:00 PM
-                  </p>
-                  <p class="has-text-grey mb-3">Grainger Hall</p>
-                  <p class="content is-size-5">
-                    Watch student teams pitch their startup ideas to a panel of
-                    local founders and mentors.
-                  </p>
-                  <a
-                    class="button is-light bff-red-text has-text-weight-semibold"
-                    href="#"
-                    >RSVP</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="column">
-              <div class="card home-info-card">
-                <div class="card-content">
-                  <p class="title is-4 has-text-white">Founder Coffee Chat</p>
-                  <p class="has-text-grey mb-2">
-                    April 17, 2026 &middot; 10:00 AM
-                  </p>
-                  <p class="has-text-grey mb-3">Memorial Union</p>
-                  <p class="content is-size-5">
-                    Casual networking with fellow student entrepreneurs over
-                    coffee. All majors welcome.
-                  </p>
-                  <a
-                    class="button is-light bff-red-text has-text-weight-semibold"
-                    href="#"
-                    >RSVP</a
-                  >
-                </div>
-              </div>
-            </div>
-
-            <div class="column">
-              <div class="card home-info-card">
-                <div class="card-content">
-                  <p class="title is-4 has-text-white">Idea Workshop</p>
-                  <p class="has-text-grey mb-2">
-                    April 24, 2026 &middot; 5:30 PM
-                  </p>
-                  <p class="has-text-grey mb-3">Wendt Commons</p>
-                  <p class="content is-size-5">
-                    A hands-on session to brainstorm, validate, and refine your
-                    startup concept with peers.
-                  </p>
-                  <a
-                    class="button is-light bff-red-text has-text-weight-semibold"
-                    href="#"
-                    >RSVP</a
-                  >
-                </div>
-              </div>
+          <div id="events-list" class="columns is-variable is-5">
+            <div class="column is-full">
+              <p id="events-empty-message" class="is-size-5 has-text-grey">
+                No upcoming events have been posted yet.
+              </p>
             </div>
           </div>
         </div>
@@ -936,6 +876,7 @@
     </footer>
 
     <script type="module" src="firebase-init.js"></script>
+    <script type="module" src="events.js"></script>
     <script src="navbar.js"></script>
   </body>
 </html>

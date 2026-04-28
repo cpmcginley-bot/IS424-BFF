@@ -2,7 +2,7 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/12.0.0/firebas
 import { getAuth } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-auth.js";
 import { getFirestore } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
-const firebaseConfig = {
+let firebaseConfig = {
   apiKey: "AIzaSyCY99HVQsaTBJBDmkfWVJMcbGqqlSIvlWA",
   authDomain: "badgerff.firebaseapp.com",
   projectId: "badgerff",
@@ -12,8 +12,8 @@ const firebaseConfig = {
   measurementId: "G-W6DSY0439R",
 };
 
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const db = getFirestore(app);
+let app = initializeApp(firebaseConfig);
+let auth = getAuth(app);
+let db = getFirestore(app);
 
 window.BFFFirebase = { app, auth, db };

@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | Badger Future Founders</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar px-4 py-3"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <div class="navbar-item">
+          <strong class="is-size-4 bff-red-text">Badger Future Founders</strong>
+        </div>
+      </div>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <button
+            id="admin-logout-btn"
+            class="button is-light bff-red-text has-text-weight-semibold"
+            type="button"
+          >
+            Log Out
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero is-black home-hero">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title has-text-white home-hero-title">
+              Admin <span class="bff-red-text">Events</span>
+            </h1>
+            <p class="subtitle has-text-grey-light home-hero-subtitle">
+              Create event details for future event management.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-card-section">
+        <div class="container" style="max-width: 760px">
+          <div class="card get-started-card mb-5">
+            <div class="card-content">
+              <h2 class="title is-3">Create Event</h2>
+              <p class="mb-5">
+                This page is not linked in the navbar. Only signed-in Firebase
+                admin accounts should use it.
+              </p>
+
+              <p
+                id="event-error"
+                class="has-text-danger mb-4"
+                style="display: none"
+              >
+                Please fill out every field before creating an event.
+              </p>
+
+              <p
+                id="event-success"
+                class="has-text-success mb-4"
+                style="display: none"
+              >
+                Event created successfully.
+              </p>
+
+              <div class="field">
+                <label class="label has-text-black">Event Title</label>
+                <div class="control">
+                  <input
+                    id="event-title"
+                    class="input get-started-input"
+                    type="text"
+                    placeholder="Startup Pitch Night"
+                  />
+                </div>
+              </div>
+
+              <div class="columns">
+                <div class="column">
+                  <div class="field">
+                    <label class="label has-text-black">Date</label>
+                    <div class="control">
+                      <input
+                        id="event-date"
+                        class="input get-started-input"
+                        type="date"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="column">
+                  <div class="field">
+                    <label class="label has-text-black">Time</label>
+                    <div class="control">
+                      <input
+                        id="event-time"
+                        class="input get-started-input"
+                        type="time"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label has-text-black">Location</label>
+                <div class="control">
+                  <input
+                    id="event-location"
+                    class="input get-started-input"
+                    type="text"
+                    placeholder="Grainger Hall"
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label has-text-black">Luma RSVP Link</label>
+                <div class="control">
+                  <input
+                    id="event-luma-link"
+                    class="input get-started-input"
+                    type="url"
+                    placeholder="https://lu.ma/your-event-link"
+                  />
+                </div>
+              </div>
+
+              <div class="field">
+                <label class="label has-text-black">Description</label>
+                <div class="control">
+                  <textarea
+                    id="event-description"
+                    class="textarea get-started-input"
+                    rows="5"
+                    placeholder="Describe the event..."
+                  ></textarea>
+                </div>
+              </div>
+
+              <button
+                id="create-event-btn"
+                class="button bff-red-button has-text-weight-semibold"
+                type="button"
+              >
+                Create Event
+              </button>
+            </div>
+          </div>
+
+          <div class="card get-started-card">
+            <div class="card-content">
+              <h2 class="title is-3">Current Events</h2>
+              <p class="mb-5">
+                Delete old events here when they should no longer appear on the
+                home page or events page.
+              </p>
+
+              <p
+                id="delete-event-message"
+                class="has-text-success mb-4"
+                style="display: none"
+              >
+                Event deleted.
+              </p>
+
+              <div id="admin-events-list">
+                <p id="admin-events-empty-message" class="has-text-grey mb-3">
+                  Loading events...
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script type="module" src="firebase-init.js"></script>
+    <script type="module" src="admin.js"></script>
+  </body>
+</html>

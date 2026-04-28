@@ -1,45 +1,47 @@
 // puppeteer.js
 // Automated browser test for the BFF website.
-// Tests: page loads, apply form submission to Firestore, and sign-in button presence.
+// Tests: page loads, application form submission, and admin modal presence.
 //
 // HOW TO RUN:
 //   1. cd into your project folder
 //   2. npm install puppeteer
 //   3. node puppeteer.js
 
-const puppeteer = require("puppeteer");
+let puppeteer = require("puppeteer");
 
-const BASE_URL = "https://badgerff.web.app";
+let BASE_URL = "https://badgerff.web.app";
 
 async function go() {
-  const browser = await puppeteer.launch({
+  let browser = await puppeteer.launch({
     headless: false,
     slowMo: 60,
   });
 
-  const page = await browser.newPage();
+  let page = await browser.newPage();
   await page.setViewport({ width: 1280, height: 800 });
 
   // ── TEST 1: Homepage loads ─────────────────────────────────────────────────
   console.log("TEST 1: Loading homepage...");
   await page.goto(BASE_URL, { waitUntil: "networkidle2" });
-  const homeTitle = await page.title();
+  let homeTitle = await page.title();
   console.log("  Page title:", homeTitle);
   console.log("  PASS: Homepage loaded\n");
 
   // ── TEST 2: Events page loads ──────────────────────────────────────────────
   console.log("TEST 2: Loading Events page...");
   await page.goto(BASE_URL + "/events.html", { waitUntil: "networkidle2" });
-  const eventsTitle = await page.title();
+  let eventsTitle = await page.title();
   console.log("  Page title:", eventsTitle);
   console.log("  PASS: Events page loaded\n");
 
-  // ── TEST 3: Apply page loads ───────────────────────────────────────────────
-  console.log("TEST 3: Loading Apply page...");
-  await page.goto(BASE_URL + "/apply.html", { waitUntil: "networkidle2" });
-  const applyTitle = await page.title();
-  console.log("  Page title:", applyTitle);
-  console.log("  PASS: Apply page loaded\n");
+  // ── TEST 3: Get Started page loads ────────────────────────────────────────
+  console.log("TEST 3: Loading Get Started page...");
+  await page.goto(BASE_URL + "/get-started.html", {
+    waitUntil: "networkidle2",
+  });
+  let getStartedTitle = await page.title();
+  console.log("  Page title:", getStartedTitle);
+  console.log("  PASS: Get Started page loaded\n");
 
   // ── TEST 4: Fill and submit the application form ───────────────────────────
   console.log("TEST 4: Filling out application form...");
@@ -61,22 +63,20 @@ async function go() {
     "  PASS: Success message appeared — form submitted to Firestore\n",
   );
 
-  // ── TEST 5: Get Started page loads and Google button exists ────────────────
-  console.log("TEST 5: Loading Get Started page...");
-  await page.goto(BASE_URL + "/get-started.html", {
-    waitUntil: "networkidle2",
-  });
-  const googleBtn = await page.$("#google-signin-btn");
-  if (googleBtn) {
-    console.log("  PASS: Google Sign-In button found\n");
+  // ── TEST 5: Admin modal opens ──────────────────────────────────────────────
+  console.log("TEST 5: Opening Admin Sign In modal...");
+  await page.click("#admin-open-btn");
+  let adminModal = await page.$(".modal.is-active");
+  if (adminModal) {
+    console.log("  PASS: Admin modal opened\n");
   } else {
-    console.log("  FAIL: Google Sign-In button not found\n");
+    console.log("  FAIL: Admin modal did not open\n");
   }
 
   // ── TEST 6: About page loads ───────────────────────────────────────────────
   console.log("TEST 6: Loading About page...");
   await page.goto(BASE_URL + "/about.html", { waitUntil: "networkidle2" });
-  const aboutTitle = await page.title();
+  let aboutTitle = await page.title();
   console.log("  Page title:", aboutTitle);
   console.log("  PASS: About page loaded\n");
 

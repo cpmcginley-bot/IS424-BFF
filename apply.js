@@ -7,15 +7,15 @@ import {
   addDoc,
 } from "https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore.js";
 
-const { db } = window.BFFFirebase;
+let db = window.BFFFirebase.db;
 
 document.getElementById("submit-btn").addEventListener("click", async () => {
   // -- Read values from the form --
-  const name = document.getElementById("app-name").value.trim();
-  const email = document.getElementById("app-email").value.trim();
-  const major = document.getElementById("app-major").value.trim();
-  const year = document.getElementById("app-year").value;
-  const why = document.getElementById("app-why").value.trim();
+  let name = document.getElementById("app-name").value.trim();
+  let email = document.getElementById("app-email").value.trim();
+  let major = document.getElementById("app-major").value.trim();
+  let year = document.getElementById("app-year").value;
+  let why = document.getElementById("app-why").value.trim();
 
   // -- Basic validation: make sure nothing is empty --
   if (!name || !email || !major || !year || !why) {
@@ -24,7 +24,7 @@ document.getElementById("submit-btn").addEventListener("click", async () => {
   }
 
   // -- Disable button so they can't double-submit --
-  const btn = document.getElementById("submit-btn");
+  let btn = document.getElementById("submit-btn");
   btn.disabled = true;
   btn.textContent = "Submitting...";
 

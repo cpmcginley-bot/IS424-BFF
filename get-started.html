@@ -40,9 +40,6 @@
           <a class="navbar-item has-text-weight-medium" href="index.html"
             >Home</a
           >
-          <a class="navbar-item has-text-weight-medium" href="apply.html"
-            >Apply</a
-          >
           <a class="navbar-item has-text-weight-medium" href="events.html"
             >Events</a
           >
@@ -75,153 +72,197 @@
               Get <span class="bff-red-text">Started</span>
             </h1>
             <p class="subtitle has-text-grey-light home-hero-subtitle">
-              Sign in to your account or create a new one.
+              Apply to join Badger Future Founders.
             </p>
           </div>
         </div>
       </section>
 
-      <!-- Logged-out view: sign in / sign up cards -->
-      <section class="section home-card-section" id="auth-section">
-        <div class="container">
-          <div class="columns is-variable is-5">
-            <!-- Sign In Card -->
-            <div class="column">
-              <div class="card home-info-card">
-                <div class="card-content">
-                  <p class="title is-3 auth-card-title">Sign In</p>
-                  <p class="content is-size-5 mb-5">
-                    Already a member? Sign in to access events, RSVP, and manage
-                    your profile.
-                  </p>
-                  <button
-                    id="google-signin-btn"
-                    class="button is-white has-text-weight-semibold is-medium"
-                    type="button"
-                    style="border: 1px solid #d1d5db; width: 100%"
-                  >
-                    <span class="icon mr-2">
-                      <!-- Google "G" logo SVG -->
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 48 48"
-                        width="20"
-                        height="20"
-                      >
-                        <path
-                          fill="#EA4335"
-                          d="M24 9.5c3.14 0 5.95 1.08 8.17 2.86l6.1-6.1C34.46 3.04 29.5 1 24 1 14.82 1 7.07 6.48 3.96 14.18l7.1 5.52C12.66 13.54 17.9 9.5 24 9.5z"
-                        />
-                        <path
-                          fill="#4285F4"
-                          d="M46.52 24.5c0-1.64-.15-3.22-.42-4.75H24v9h12.7c-.55 2.97-2.2 5.48-4.68 7.17l7.2 5.6C43.27 37.26 46.52 31.32 46.52 24.5z"
-                        />
-                        <path
-                          fill="#FBBC05"
-                          d="M11.06 28.3A14.6 14.6 0 0 1 9.5 24c0-1.49.26-2.93.56-4.3l-7.1-5.52A23.94 23.94 0 0 0 0 24c0 3.87.93 7.53 2.57 10.77l8.49-6.47z"
-                        />
-                        <path
-                          fill="#34A853"
-                          d="M24 47c5.5 0 10.12-1.82 13.5-4.93l-7.2-5.6c-1.83 1.23-4.17 1.96-6.3 1.96-6.1 0-11.34-4.04-13.19-9.56l-8.49 6.47C7.07 41.52 14.82 47 24 47z"
-                        />
-                      </svg>
-                    </span>
-                    Continue with Google
-                  </button>
-                  <p
-                    id="signin-error"
-                    class="has-text-danger mt-3 is-size-7"
-                    style="display: none"
-                  ></p>
-                </div>
-              </div>
-            </div>
-
-            <!-- Sign Up Card -->
-            <div class="column">
-              <div class="card home-info-card">
-                <div class="card-content">
-                  <p class="title is-3 auth-card-title">Sign Up</p>
-                  <p class="content is-size-5 mb-5">
-                    New here? Create an account to get started with Badger
-                    Future Founders.
-                  </p>
-                  <button
-                    id="google-signup-btn"
-                    class="button is-white has-text-weight-semibold is-medium"
-                    type="button"
-                    style="border: 1px solid #d1d5db; width: 100%"
-                  >
-                    <span class="icon mr-2">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 48 48"
-                        width="20"
-                        height="20"
-                      >
-                        <path
-                          fill="#EA4335"
-                          d="M24 9.5c3.14 0 5.95 1.08 8.17 2.86l6.1-6.1C34.46 3.04 29.5 1 24 1 14.82 1 7.07 6.48 3.96 14.18l7.1 5.52C12.66 13.54 17.9 9.5 24 9.5z"
-                        />
-                        <path
-                          fill="#4285F4"
-                          d="M46.52 24.5c0-1.64-.15-3.22-.42-4.75H24v9h12.7c-.55 2.97-2.2 5.48-4.68 7.17l7.2 5.6C43.27 37.26 46.52 31.32 46.52 24.5z"
-                        />
-                        <path
-                          fill="#FBBC05"
-                          d="M11.06 28.3A14.6 14.6 0 0 1 9.5 24c0-1.49.26-2.93.56-4.3l-7.1-5.52A23.94 23.94 0 0 0 0 24c0 3.87.93 7.53 2.57 10.77l8.49-6.47z"
-                        />
-                        <path
-                          fill="#34A853"
-                          d="M24 47c5.5 0 10.12-1.82 13.5-4.93l-7.2-5.6c-1.83 1.23-4.17 1.96-6.3 1.96-6.1 0-11.34-4.04-13.19-9.56l-8.49 6.47C7.07 41.52 14.82 47 24 47z"
-                        />
-                      </svg>
-                    </span>
-                    Sign Up with Google
-                  </button>
-                  <p
-                    id="signup-error"
-                    class="has-text-danger mt-3 is-size-7"
-                    style="display: none"
-                  ></p>
-                </div>
-              </div>
-            </div>
+      <section class="section home-card-section">
+        <div class="container" style="max-width: 760px">
+          <div class="has-text-right mb-3">
+            <button
+              id="admin-open-btn"
+              class="button admin-signin-button has-text-weight-semibold"
+              type="button"
+            >
+              Admin Sign In
+            </button>
           </div>
-        </div>
-      </section>
 
-      <!-- Logged-in view: shown after successful auth -->
-      <section
-        class="section home-card-section"
-        id="profile-section"
-        style="display: none"
-      >
-        <div class="container" style="max-width: 480px">
-          <div class="card home-info-card">
-            <div class="card-content has-text-centered">
-              <img
-                id="user-photo"
-                src=""
-                alt="Profile photo"
-                width="80"
-                height="80"
-                style="border-radius: 50%; margin-bottom: 1rem; display: none"
-              />
-              <p class="title is-4 auth-card-title" id="user-name"></p>
-              <p class="has-text-grey-light mb-4" id="user-email"></p>
-              <button
-                id="signout-btn"
-                class="button is-light bff-red-text has-text-weight-semibold"
-                type="button"
+          <div class="card get-started-card">
+            <div class="card-content">
+              <h2 class="title is-3">Membership Application</h2>
+              <p class="mb-2">
+                Looking to apply? Fill out this form here and our team will
+                review your application.
+              </p>
+              <p class="mb-5">
+                We welcome students of all majors and experience levels.
+              </p>
+
+              <p
+                id="app-error"
+                class="has-text-danger mb-4"
+                style="display: none"
               >
-                Sign Out
-              </button>
+                Please fill out all fields before submitting.
+              </p>
+
+              <div id="app-form">
+                <div class="field">
+                  <label class="label has-text-black">Full Name</label>
+                  <div class="control">
+                    <input
+                      id="app-name"
+                      class="input get-started-input"
+                      type="text"
+                      placeholder="Your full name"
+                    />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label has-text-black">Email</label>
+                  <div class="control">
+                    <input
+                      id="app-email"
+                      class="input get-started-input"
+                      type="email"
+                      placeholder="you@wisc.edu"
+                    />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label has-text-black">Major</label>
+                  <div class="control">
+                    <input
+                      id="app-major"
+                      class="input get-started-input"
+                      type="text"
+                      placeholder="Your major"
+                    />
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label has-text-black">Year</label>
+                  <div class="control">
+                    <div class="select">
+                      <select id="app-year" class="get-started-input">
+                        <option value="">Select your year</option>
+                        <option>Freshman</option>
+                        <option>Sophomore</option>
+                        <option>Junior</option>
+                        <option>Senior</option>
+                        <option>Graduate</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="field">
+                  <label class="label has-text-black"
+                    >Why do you want to join BFF?</label
+                  >
+                  <div class="control">
+                    <textarea
+                      id="app-why"
+                      class="textarea get-started-input"
+                      placeholder="Tell us a bit about your interest in entrepreneurship..."
+                      rows="4"
+                    ></textarea>
+                  </div>
+                </div>
+
+                <div class="field mt-5">
+                  <div class="control">
+                    <button
+                      id="submit-btn"
+                      class="button bff-red-button is-medium has-text-weight-semibold"
+                      type="button"
+                    >
+                      Submit Application
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="app-success" style="display: none">
+                <div class="notification is-success is-light">
+                  <p class="title is-4 mb-3">Application Submitted!</p>
+                  <p class="is-size-5">
+                    Thanks for applying to Badger Future Founders. Our team will
+                    review your application and be in touch soon.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <div id="admin-modal" class="modal">
+      <div class="modal-background"></div>
+      <div class="modal-card">
+        <header class="modal-card-head">
+          <p class="modal-card-title">Admin Sign In</p>
+          <button
+            class="delete"
+            id="admin-close-btn"
+            aria-label="close"
+            type="button"
+          ></button>
+        </header>
+        <section class="modal-card-body">
+          <div class="field">
+            <label class="label admin-modal-label">Email</label>
+            <div class="control">
+              <input
+                id="admin-email"
+                class="input admin-modal-input"
+                type="email"
+              />
+            </div>
+          </div>
+          <div class="field">
+            <label class="label admin-modal-label">Password</label>
+            <div class="control">
+              <input
+                id="admin-password"
+                class="input admin-modal-input"
+                type="password"
+              />
+            </div>
+          </div>
+          <p
+            id="admin-login-error"
+            class="has-text-danger mb-3"
+            style="display: none"
+          >
+            Admin sign in failed. Please check your email and password.
+          </p>
+          <p class="is-size-7 has-text-grey">
+            Admin accounts should be created manually in Firebase Console. There
+            is no public sign-up for regular users.
+          </p>
+        </section>
+        <footer class="modal-card-foot">
+          <button
+            id="admin-login-btn"
+            class="button bff-red-button"
+            type="button"
+          >
+            Sign In
+          </button>
+          <button id="admin-cancel-btn" class="button" type="button">
+            Cancel
+          </button>
+        </footer>
+      </div>
+    </div>
 
     <footer
       class="footer"
@@ -249,9 +290,9 @@
       </div>
     </footer>
 
-    <!-- Firebase must load first (type="module" runs async, so auth.js waits for it) -->
     <script type="module" src="firebase-init.js"></script>
-    <script type="module" src="auth.js"></script>
+    <script type="module" src="apply.js"></script>
+    <script type="module" src="get-started.js"></script>
     <script src="navbar.js"></script>
   </body>
 </html>

@@ -40,9 +40,6 @@
           <a class="navbar-item has-text-weight-medium" href="index.html"
             >Home</a
           >
-          <a class="navbar-item has-text-weight-medium" href="apply.html"
-            >Apply</a
-          >
           <a class="navbar-item has-text-weight-medium" href="events.html"
             >Events</a
           >
@@ -83,7 +80,7 @@
             <div class="buttons home-hero-actions">
               <a
                 class="button bff-red-button is-medium has-text-weight-semibold"
-                href="apply.html"
+                href="get-started.html"
               >
                 Join Us
               </a>
@@ -104,14 +101,14 @@
             <div class="column">
               <div class="card home-info-card">
                 <div class="card-content">
-                  <p class="title is-3 has-text-white">Apply</p>
+                  <p class="title is-3 has-text-white">Get Started</p>
                   <p class="content is-size-5">
                     Start your Badger Future Founders application and take the
                     first step toward building your idea.
                   </p>
                   <a
                     class="button is-light bff-red-text has-text-weight-semibold"
-                    href="apply.html"
+                    href="get-started.html"
                   >
                     Apply Now
                   </a>
@@ -181,29 +178,9 @@
         <div class="container">
           <h2 class="title is-3">Upcoming Events</h2>
 
-          <div class="box mb-4">
-            <p class="has-text-weight-semibold is-size-5">
-              Startup Pitch Night
-            </p>
-            <p class="has-text-grey">
-              April 10, 2026 &middot; 6:00 PM &middot; Grainger Hall
-            </p>
-            <p class="mt-2">
-              Watch student teams pitch their startup ideas to a panel of local
-              founders and mentors.
-            </p>
-          </div>
-
-          <div class="box mb-4">
-            <p class="has-text-weight-semibold is-size-5">
-              Founder Coffee Chat
-            </p>
-            <p class="has-text-grey">
-              April 17, 2026 &middot; 10:00 AM &middot; Memorial Union
-            </p>
-            <p class="mt-2">
-              Casual networking with fellow student entrepreneurs over coffee.
-              All majors welcome.
+          <div id="home-events-list">
+            <p id="home-events-empty-message" class="is-size-5 has-text-grey">
+              No upcoming events have been posted yet.
             </p>
           </div>
 
@@ -245,6 +222,7 @@
     </footer>
 
     <script type="module" src="firebase-init.js"></script>
+    <script type="module" src="home-events.js"></script>
     <script src="navbar.js"></script>
   </body>
 </html>
