@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply | Badger Future Founders</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar px-4 py-3"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <div class="navbar-item">
+          <strong class="is-size-4 bff-red-text">Badger Future Founders</strong>
+        </div>
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="mainNavbar"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div id="mainNavbar" class="navbar-menu">
+        <div class="navbar-start main-nav-links">
+          <a class="navbar-item has-text-weight-medium" href="index.html"
+            >Home</a
+          >
+          <a class="navbar-item has-text-weight-medium" href="apply.html"
+            >Apply</a
+          >
+          <a class="navbar-item has-text-weight-medium" href="events.html"
+            >Events</a
+          >
+          <a class="navbar-item has-text-weight-medium" href="team.html"
+            >Team</a
+          >
+          <a class="navbar-item has-text-weight-medium" href="about.html"
+            >About</a
+          >
+        </div>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a
+              class="button is-light bff-red-text has-text-weight-semibold"
+              href="get-started.html"
+              >Get Started</a
+            >
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero is-black home-hero">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title has-text-white home-hero-title">
+              <span class="bff-red-text">Apply</span>
+            </h1>
+            <p class="subtitle has-text-grey-light home-hero-subtitle">
+              Interested in joining? Tell us a bit about yourself.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section home-card-section">
+        <div class="container" style="max-width: 640px">
+          <h2 class="title is-3">Membership Application</h2>
+          <p class="mb-5">
+            Fill out the form below and our team will review your application.
+            We welcome students of all majors and experience levels.
+          </p>
+
+          <!-- Error message (hidden by default) -->
+          <p id="app-error" class="has-text-danger mb-4" style="display: none">
+            Please fill out all fields before submitting.
+          </p>
+
+          <!-- The form -->
+          <div id="app-form">
+            <div class="field">
+              <label class="label has-text-black">Full Name</label>
+              <div class="control">
+                <input
+                  id="app-name"
+                  class="input"
+                  type="text"
+                  placeholder="Your full name"
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label has-text-black">Email</label>
+              <div class="control">
+                <input
+                  id="app-email"
+                  class="input"
+                  type="email"
+                  placeholder="you@wisc.edu"
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label has-text-black">Major</label>
+              <div class="control">
+                <input
+                  id="app-major"
+                  class="input"
+                  type="text"
+                  placeholder="Your major"
+                />
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label has-text-black">Year</label>
+              <div class="control">
+                <div class="select">
+                  <select id="app-year">
+                    <option value="">Select your year</option>
+                    <option>Freshman</option>
+                    <option>Sophomore</option>
+                    <option>Junior</option>
+                    <option>Senior</option>
+                    <option>Graduate</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="field">
+              <label class="label has-text-black"
+                >Why do you want to join BFF?</label
+              >
+              <div class="control">
+                <textarea
+                  id="app-why"
+                  class="textarea"
+                  placeholder="Tell us a bit about your interest in entrepreneurship..."
+                  rows="4"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="field mt-5">
+              <div class="control">
+                <button
+                  id="submit-btn"
+                  class="button bff-red-button is-medium has-text-weight-semibold"
+                  type="button"
+                >
+                  Submit Application
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- end #app-form -->
+
+          <!-- Success message (hidden until submission succeeds) -->
+          <div id="app-success" style="display: none">
+            <div class="card home-info-card">
+              <div class="card-content has-text-centered">
+                <p class="title is-4 has-text-white mb-3">
+                  Application Submitted!
+                </p>
+                <p class="is-size-5">
+                  Thanks for applying to Badger Future Founders. Our team will
+                  review your application and be in touch soon.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="footer"
+      style="background-color: #1f2937; padding: 2rem 1.5rem"
+    >
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <p class="has-text-weight-semibold has-text-white">
+              Badger Future Founders
+            </p>
+            <p class="has-text-grey-light is-size-7">
+              A student entrepreneurship community at UW-Madison.
+            </p>
+          </div>
+          <div class="column has-text-right-tablet">
+            <p class="has-text-grey-light is-size-7">
+              Contact us: bff@studentorg.wisc.edu
+            </p>
+            <p class="has-text-grey-light is-size-7">
+              &copy; 2026 Badger Future Founders
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script type="module" src="firebase-init.js"></script>
+    <script type="module" src="apply.js"></script>
+    <script src="navbar.js"></script>
+  </body>
+</html>

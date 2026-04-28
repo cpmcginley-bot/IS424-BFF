@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Get Started | Badger Future Founders</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav
+      class="navbar px-4 py-3"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <div class="navbar-item">
+          <strong class="is-size-4 bff-red-text">Badger Future Founders</strong>
+        </div>
+
+        <a
+          role="button"
+          class="navbar-burger"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="mainNavbar"
+        >
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+
+      <div id="mainNavbar" class="navbar-menu">
+        <div class="navbar-start main-nav-links">
+          <a class="navbar-item has-text-weight-medium" href="index.html"
+            >Home</a
+          >
+          <a class="navbar-item has-text-weight-medium" href="apply.html"
+            >Apply</a
+          >
+          <a class="navbar-item has-text-weight-medium" href="events.html"
+            >Events</a
+          >
+          <a class="navbar-item has-text-weight-medium" href="team.html"
+            >Team</a
+          >
+          <a class="navbar-item has-text-weight-medium" href="about.html"
+            >About</a
+          >
+        </div>
+
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <a
+              class="button is-light bff-red-text has-text-weight-semibold"
+              href="get-started.html"
+            >
+              Get Started
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero is-black home-hero">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title has-text-white home-hero-title">
+              Get <span class="bff-red-text">Started</span>
+            </h1>
+            <p class="subtitle has-text-grey-light home-hero-subtitle">
+              Sign in to your account or create a new one.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Logged-out view: sign in / sign up cards -->
+      <section class="section home-card-section" id="auth-section">
+        <div class="container">
+          <div class="columns is-variable is-5">
+            <!-- Sign In Card -->
+            <div class="column">
+              <div class="card home-info-card">
+                <div class="card-content">
+                  <p class="title is-3 auth-card-title">Sign In</p>
+                  <p class="content is-size-5 mb-5">
+                    Already a member? Sign in to access events, RSVP, and manage
+                    your profile.
+                  </p>
+                  <button
+                    id="google-signin-btn"
+                    class="button is-white has-text-weight-semibold is-medium"
+                    type="button"
+                    style="border: 1px solid #d1d5db; width: 100%"
+                  >
+                    <span class="icon mr-2">
+                      <!-- Google "G" logo SVG -->
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 48 48"
+                        width="20"
+                        height="20"
+                      >
+                        <path
+                          fill="#EA4335"
+                          d="M24 9.5c3.14 0 5.95 1.08 8.17 2.86l6.1-6.1C34.46 3.04 29.5 1 24 1 14.82 1 7.07 6.48 3.96 14.18l7.1 5.52C12.66 13.54 17.9 9.5 24 9.5z"
+                        />
+                        <path
+                          fill="#4285F4"
+                          d="M46.52 24.5c0-1.64-.15-3.22-.42-4.75H24v9h12.7c-.55 2.97-2.2 5.48-4.68 7.17l7.2 5.6C43.27 37.26 46.52 31.32 46.52 24.5z"
+                        />
+                        <path
+                          fill="#FBBC05"
+                          d="M11.06 28.3A14.6 14.6 0 0 1 9.5 24c0-1.49.26-2.93.56-4.3l-7.1-5.52A23.94 23.94 0 0 0 0 24c0 3.87.93 7.53 2.57 10.77l8.49-6.47z"
+                        />
+                        <path
+                          fill="#34A853"
+                          d="M24 47c5.5 0 10.12-1.82 13.5-4.93l-7.2-5.6c-1.83 1.23-4.17 1.96-6.3 1.96-6.1 0-11.34-4.04-13.19-9.56l-8.49 6.47C7.07 41.52 14.82 47 24 47z"
+                        />
+                      </svg>
+                    </span>
+                    Continue with Google
+                  </button>
+                  <p
+                    id="signin-error"
+                    class="has-text-danger mt-3 is-size-7"
+                    style="display: none"
+                  ></p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Sign Up Card -->
+            <div class="column">
+              <div class="card home-info-card">
+                <div class="card-content">
+                  <p class="title is-3 auth-card-title">Sign Up</p>
+                  <p class="content is-size-5 mb-5">
+                    New here? Create an account to get started with Badger
+                    Future Founders.
+                  </p>
+                  <button
+                    id="google-signup-btn"
+                    class="button is-white has-text-weight-semibold is-medium"
+                    type="button"
+                    style="border: 1px solid #d1d5db; width: 100%"
+                  >
+                    <span class="icon mr-2">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 48 48"
+                        width="20"
+                        height="20"
+                      >
+                        <path
+                          fill="#EA4335"
+                          d="M24 9.5c3.14 0 5.95 1.08 8.17 2.86l6.1-6.1C34.46 3.04 29.5 1 24 1 14.82 1 7.07 6.48 3.96 14.18l7.1 5.52C12.66 13.54 17.9 9.5 24 9.5z"
+                        />
+                        <path
+                          fill="#4285F4"
+                          d="M46.52 24.5c0-1.64-.15-3.22-.42-4.75H24v9h12.7c-.55 2.97-2.2 5.48-4.68 7.17l7.2 5.6C43.27 37.26 46.52 31.32 46.52 24.5z"
+                        />
+                        <path
+                          fill="#FBBC05"
+                          d="M11.06 28.3A14.6 14.6 0 0 1 9.5 24c0-1.49.26-2.93.56-4.3l-7.1-5.52A23.94 23.94 0 0 0 0 24c0 3.87.93 7.53 2.57 10.77l8.49-6.47z"
+                        />
+                        <path
+                          fill="#34A853"
+                          d="M24 47c5.5 0 10.12-1.82 13.5-4.93l-7.2-5.6c-1.83 1.23-4.17 1.96-6.3 1.96-6.1 0-11.34-4.04-13.19-9.56l-8.49 6.47C7.07 41.52 14.82 47 24 47z"
+                        />
+                      </svg>
+                    </span>
+                    Sign Up with Google
+                  </button>
+                  <p
+                    id="signup-error"
+                    class="has-text-danger mt-3 is-size-7"
+                    style="display: none"
+                  ></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Logged-in view: shown after successful auth -->
+      <section
+        class="section home-card-section"
+        id="profile-section"
+        style="display: none"
+      >
+        <div class="container" style="max-width: 480px">
+          <div class="card home-info-card">
+            <div class="card-content has-text-centered">
+              <img
+                id="user-photo"
+                src=""
+                alt="Profile photo"
+                width="80"
+                height="80"
+                style="border-radius: 50%; margin-bottom: 1rem; display: none"
+              />
+              <p class="title is-4 auth-card-title" id="user-name"></p>
+              <p class="has-text-grey-light mb-4" id="user-email"></p>
+              <button
+                id="signout-btn"
+                class="button is-light bff-red-text has-text-weight-semibold"
+                type="button"
+              >
+                Sign Out
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer
+      class="footer"
+      style="background-color: #1f2937; padding: 2rem 1.5rem"
+    >
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <p class="has-text-weight-semibold has-text-white">
+              Badger Future Founders
+            </p>
+            <p class="has-text-grey-light is-size-7">
+              A student entrepreneurship community at UW-Madison.
+            </p>
+          </div>
+          <div class="column has-text-right-tablet">
+            <p class="has-text-grey-light is-size-7">
+              Contact us: bff@studentorg.wisc.edu
+            </p>
+            <p class="has-text-grey-light is-size-7">
+              &copy; 2026 Badger Future Founders
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Firebase must load first (type="module" runs async, so auth.js waits for it) -->
+    <script type="module" src="firebase-init.js"></script>
+    <script type="module" src="auth.js"></script>
+    <script src="navbar.js"></script>
+  </body>
+</html>

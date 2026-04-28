@@ -1,0 +1,259 @@
+body {
+  min-height: 100vh;
+  background-color: #f7f7fb;
+  color: #1f2937;
+}
+
+:root {
+  --bff-red: #b30d12;
+  --bff-red-dark: #8f090d;
+}
+
+.navbar {
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.06);
+}
+
+.bff-red-text {
+  color: var(--bff-red) !important;
+}
+
+.bff-red-button {
+  background-color: var(--bff-red);
+  border-color: var(--bff-red);
+  color: #ffffff;
+}
+
+.bff-red-button:hover,
+.bff-red-button:focus {
+  background-color: var(--bff-red-dark);
+  border-color: var(--bff-red-dark);
+  color: #ffffff;
+}
+
+@media screen and (min-width: 1024px) {
+  .navbar-menu {
+    display: flex;
+    align-items: center;
+  }
+
+  .main-nav-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .main-nav-links .navbar-item {
+    justify-content: flex-end;
+  }
+
+  .navbar-end {
+    margin-left: 0;
+  }
+}
+
+.navbar-item,
+.navbar-link,
+.title,
+.subtitle {
+  color: #1f2937;
+}
+
+.navbar-item:hover,
+.navbar-item:focus,
+.navbar-link:hover,
+.navbar-link:focus {
+  background-color: #f1f1f1;
+  color: #1f2937;
+}
+
+.navbar-burger,
+.navbar-burger:hover,
+.navbar-burger:focus {
+  color: #1f2937;
+  background: transparent;
+}
+
+.section {
+  background-color: transparent;
+}
+
+.container {
+  background-color: transparent;
+}
+
+.home-hero {
+  background: linear-gradient(90deg, #050505 0%, #171717 55%, #24201f 100%);
+}
+
+.home-hero .hero-body {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.home-hero-title {
+  max-width: 12ch;
+  font-size: clamp(2.75rem, 7vw, 6rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  margin-bottom: 1.5rem;
+  text-rendering: optimizeLegibility;
+}
+
+.home-hero-title span {
+  display: block;
+  white-space: nowrap;
+}
+
+.home-hero-subtitle {
+  max-width: 24ch;
+  font-size: clamp(1.1rem, 1.8vw, 1.5rem);
+  line-height: 1.4;
+  margin-bottom: 1.5rem;
+}
+
+.home-hero-actions {
+  gap: 1rem;
+}
+
+.home-card-section {
+  background-color: #f7f7fb;
+}
+
+.home-info-card {
+  height: 100%;
+}
+
+.auth-card-title {
+  color: #ffffff !important;
+}
+
+.team-section-lead {
+  max-width: 760px;
+  margin-bottom: 2rem;
+}
+
+.team-member-card {
+  height: 100%;
+  background: linear-gradient(155deg, #111827 0%, #1f2937 100%);
+  border: 1px solid rgba(179, 13, 18, 0.18);
+  border-radius: 18px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+}
+
+.team-member-card .card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+}
+
+.team-card-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.team-headshot-shell {
+  width: 96px;
+  height: 96px;
+  border-radius: 24px;
+  background: linear-gradient(135deg, rgba(179, 13, 18, 0.95), #f87171);
+  border: 1px dashed rgba(255, 255, 255, 0.45);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.team-role {
+  margin-bottom: 0.35rem;
+  color: #fca5a5;
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.team-member-name {
+  margin-bottom: 0 !important;
+}
+
+.team-member-copy {
+  color: #e5e7eb;
+  flex: 1;
+}
+
+.team-contact-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: auto;
+}
+
+.team-email {
+  color: #ffffff;
+  font-weight: 600;
+  word-break: break-word;
+}
+
+.team-email:hover,
+.team-email:focus {
+  color: #fca5a5;
+}
+
+.startup-showcase-card,
+.team-resource-card {
+  height: 100%;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.06);
+}
+
+.startup-showcase-card {
+  border-top: 4px solid var(--bff-red);
+}
+
+.team-startup-stage {
+  margin-bottom: 0.75rem;
+  color: var(--bff-red);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.team-startup-founder {
+  color: #4b5563;
+  font-weight: 600;
+}
+
+.team-connection-box {
+  padding: 2rem;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #ffffff 0%, #f9fafb 100%);
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.08);
+}
+
+@media screen and (max-width: 768px) {
+  .team-card-top {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .team-headshot-shell {
+    width: 88px;
+    height: 88px;
+    border-radius: 20px;
+  }
+
+  .team-connection-box {
+    padding: 1.5rem;
+  }
+}
