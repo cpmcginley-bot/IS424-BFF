@@ -1,6 +1,7 @@
 // puppeteer.js
-// Automated browser test for the BFF website.
-// Tests: page loads, application form submission, and admin modal presence.
+// Simple automated browser test for the BFF website.
+// Tests: page loads, team page updates, application form submission,
+// and admin modal presence.
 //
 // HOW TO RUN:
 //   1. cd into your project folder
@@ -34,8 +35,26 @@ async function go() {
   console.log("  Page title:", eventsTitle);
   console.log("  PASS: Events page loaded\n");
 
-  // ── TEST 3: Get Started page loads ────────────────────────────────────────
-  console.log("TEST 3: Loading Get Started page...");
+  // ── TEST 3: Team page loads and startup spotlight exists ──────────────────
+  console.log("TEST 3: Loading Team page...");
+  await page.goto(BASE_URL + "/team.html", { waitUntil: "networkidle2" });
+  let teamTitle = await page.title();
+  console.log("  Page title:", teamTitle);
+
+  let teamText = await page.$eval("body", (body) => body.innerText);
+  if (
+    teamText.includes("UW Startup Spotlight") &&
+    teamText.includes("Madlease") &&
+    teamText.includes("Priority") &&
+    teamText.includes("Cookd")
+  ) {
+    console.log("  PASS: Team page startup spotlight loaded\n");
+  } else {
+    console.log("  FAIL: Team page startup spotlight text is missing\n");
+  }
+
+  // ── TEST 4: Get Started page loads ────────────────────────────────────────
+  console.log("TEST 4: Loading Get Started page...");
   await page.goto(BASE_URL + "/get-started.html", {
     waitUntil: "networkidle2",
   });
@@ -43,28 +62,31 @@ async function go() {
   console.log("  Page title:", getStartedTitle);
   console.log("  PASS: Get Started page loaded\n");
 
-  // ── TEST 4: Fill and submit the application form ───────────────────────────
-  console.log("TEST 4: Filling out application form...");
-  await page.type("#app-name", "Test Applicant");
-  await page.type("#app-email", "test@wisc.edu");
+  // ── TEST 5: Fill and submit the application form ──────────────────────────
+  console.log("TEST 5: Filling out application form...");
+  await page.waitForSelector("#app-form", { visible: true });
+  await page.type("#app-name", "Puppeteer Test Applicant");
+  await page.type("#app-email", "puppeteer.test@wisc.edu");
   await page.type("#app-major", "Information Systems");
   await page.select("#app-year", "Junior");
   await page.type(
     "#app-why",
-    "I am passionate about entrepreneurship and want to connect with like-minded students at UW-Madison.",
+    "I want to join Badger Future Founders to meet other students interested in entrepreneurship, learn from campus founders, and get feedback on startup ideas.",
   );
 
-  await new Promise((r) => setTimeout(r, 1000));
   await page.click("#submit-btn");
   console.log("  Clicked Submit button");
 
-  await page.waitForSelector("#app-success", { visible: true, timeout: 8000 });
+  await page.waitForSelector("#app-success", { visible: true, timeout: 10000 });
   console.log(
     "  PASS: Success message appeared — form submitted to Firestore\n",
   );
 
-  // ── TEST 5: Admin modal opens ──────────────────────────────────────────────
-  console.log("TEST 5: Opening Admin Sign In modal...");
+  // ── TEST 6: Admin modal opens ──────────────────────────────────────────────
+  console.log("TEST 6: Opening Admin Sign In modal...");
+  await page.goto(BASE_URL + "/get-started.html", {
+    waitUntil: "networkidle2",
+  });
   await page.click("#admin-open-btn");
   let adminModal = await page.$(".modal.is-active");
   if (adminModal) {
@@ -73,8 +95,8 @@ async function go() {
     console.log("  FAIL: Admin modal did not open\n");
   }
 
-  // ── TEST 6: About page loads ───────────────────────────────────────────────
-  console.log("TEST 6: Loading About page...");
+  // ── TEST 7: About page loads ───────────────────────────────────────────────
+  console.log("TEST 7: Loading About page...");
   await page.goto(BASE_URL + "/about.html", { waitUntil: "networkidle2" });
   let aboutTitle = await page.title();
   console.log("  Page title:", aboutTitle);
