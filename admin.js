@@ -28,21 +28,11 @@ let applicationMessage = document.getElementById("application-message");
 let pendingApplicationsList = document.getElementById(
   "pending-applications-list",
 );
-let acceptedApplicationsList = document.getElementById(
-  "accepted-applications-list",
-);
-let rejectedApplicationsList = document.getElementById(
-  "rejected-applications-list",
-);
+let membersList = document.getElementById("members-list");
 let pendingApplicationsEmpty = document.getElementById(
   "pending-applications-empty",
 );
-let acceptedApplicationsEmpty = document.getElementById(
-  "accepted-applications-empty",
-);
-let rejectedApplicationsEmpty = document.getElementById(
-  "rejected-applications-empty",
-);
+let membersEmpty = document.getElementById("members-empty");
 
 function formatEventDate(dateValue) {
   if (typeof dateValue !== "string" || !dateValue.includes("-")) {
@@ -205,7 +195,7 @@ function makeApplicationCard(applicationId, applicationData) {
     rejectBtn.textContent = "Reject";
 
     acceptBtn.addEventListener("click", () => {
-      updateApplicationStatus(applicationId, "accepted");
+      acceptApplication(applicationId, applicationData);
     });
 
     rejectBtn.addEventListener("click", () => {
@@ -221,24 +211,12 @@ function makeApplicationCard(applicationId, applicationData) {
 
 function resetApplicationLists() {
   pendingApplicationsList.innerHTML = "";
-  acceptedApplicationsList.innerHTML = "";
-  rejectedApplicationsList.innerHTML = "";
 }
 
 function showEmptyApplicationMessages() {
   if (pendingApplicationsList.children.length === 0) {
     pendingApplicationsEmpty.textContent = "No pending applications.";
     pendingApplicationsList.appendChild(pendingApplicationsEmpty);
-  }
-
-  if (acceptedApplicationsList.children.length === 0) {
-    acceptedApplicationsEmpty.textContent = "No accepted members yet.";
-    acceptedApplicationsList.appendChild(acceptedApplicationsEmpty);
-  }
-
-  if (rejectedApplicationsList.children.length === 0) {
-    rejectedApplicationsEmpty.textContent = "No rejected applications.";
-    rejectedApplicationsList.appendChild(rejectedApplicationsEmpty);
   }
 }
 
@@ -251,13 +229,9 @@ async function loadApplications() {
     applicationDocs.forEach((applicationDoc) => {
       let applicationData = applicationDoc.data();
       let status = applicationData.status || "pending";
-      let card = makeApplicationCard(applicationDoc.id, applicationData);
 
-      if (status === "accepted") {
-        acceptedApplicationsList.appendChild(card);
-      } else if (status === "rejected") {
-        rejectedApplicationsList.appendChild(card);
-      } else {
+      if (status === "pending") {
+        let card = makeApplicationCard(applicationDoc.id, applicationData);
         pendingApplicationsList.appendChild(card);
       }
     });
@@ -270,6 +244,71 @@ async function loadApplications() {
       "Could not load applications: " + err.message;
     pendingApplicationsList.appendChild(pendingApplicationsEmpty);
   }
+}
+
+function makeMemberCard(memberData) {
+  let box = document.createElement("div");
+  box.className = "box";
+
+  let name = document.createElement("p");
+  name.className = "has-text-weight-semibold is-size-5";
+  name.textContent = memberData.name || "Unnamed Member";
+
+  let details = document.createElement("p");
+  details.className = "has-text-grey";
+  details.textContent =
+    (memberData.email || "No email") +
+    " · " +
+    (memberData.major || "No major") +
+    " · " +
+    (memberData.year || "No year");
+
+  box.appendChild(name);
+  box.appendChild(details);
+
+  return box;
+}
+
+async function loadMembers() {
+  try {
+    membersList.innerHTML = "";
+
+    let memberDocs = await getDocs(collection(db, "members"));
+
+    if (memberDocs.empty) {
+      membersEmpty.textContent = "No members yet.";
+      membersList.appendChild(membersEmpty);
+      return;
+    }
+
+    memberDocs.forEach((memberDoc) => {
+      let memberData = memberDoc.data();
+      membersList.appendChild(makeMemberCard(memberData));
+    });
+  } catch (err) {
+    console.error("Could not load members:", err);
+    membersList.innerHTML = "";
+    membersEmpty.textContent = "Could not load members: " + err.message;
+    membersList.appendChild(membersEmpty);
+  }
+}
+
+async function acceptApplication(applicationId, applicationData) {
+  await updateDoc(doc(db, "applications", applicationId), {
+    status: "accepted",
+  });
+
+  await addDoc(collection(db, "members"), {
+    name: applicationData.name || "",
+    email: applicationData.email || "",
+    major: applicationData.major || "",
+    year: applicationData.year || "",
+    joinedAt: new Date().toISOString(),
+  });
+
+  applicationMessage.style.display = "block";
+  loadApplications();
+  loadMembers();
 }
 
 async function updateApplicationStatus(applicationId, newStatus) {
@@ -289,6 +328,7 @@ onAuthStateChanged(auth, (user) => {
     console.log("Admin signed in:", user.email);
     loadAdminEvents();
     loadApplications();
+    loadMembers();
   }
 });
 
