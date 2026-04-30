@@ -84,7 +84,7 @@ function makeEventCard(eventData) {
   column.className = "column";
 
   let card = document.createElement("div");
-  card.className = "card home-info-card";
+  card.className = "card home-info-card event-info-card";
 
   let cardContent = document.createElement("div");
   cardContent.className = "card-content";

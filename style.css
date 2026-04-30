@@ -123,6 +123,35 @@ body {
 
 .home-info-card {
   height: 100%;
+  background-color: #111418;
+  border: 1px solid #1f2937;
+  border-radius: 12px;
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.1);
+  color: #d1d5db;
+}
+
+.home-info-card .card-content {
+  padding: 2rem;
+}
+
+.home-info-card .content {
+  color: #d1d5db;
+}
+
+.event-info-card {
+  min-height: 230px;
+}
+
+.event-info-card .title {
+  color: #ffffff !important;
+}
+
+.event-info-card .has-text-grey {
+  color: #7f8aa3 !important;
+}
+
+.event-info-card .content {
+  color: #b8beca;
 }
 
 .home-card-photo {
@@ -197,6 +226,21 @@ body {
 .admin-modal-input {
   background-color: #ffffff;
   color: #1f2937;
+}
+
+.admin-modal-card .modal-card-head,
+.admin-modal-card .modal-card-body,
+.admin-modal-card .modal-card-foot {
+  background-color: #111418;
+  border-color: #1f2937;
+}
+
+.admin-modal-card .modal-card-title {
+  color: #ffffff;
+}
+
+.admin-modal-card .has-text-grey {
+  color: #b8beca !important;
 }
 
 .auth-card-title {
